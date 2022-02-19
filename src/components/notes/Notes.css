@@ -1,0 +1,36 @@
+.filter-btn {
+    outline: none;
+    border: none;
+    color: black;
+    background-color: transparent;
+    margin-right: 1rem;
+}
+
+.filter-active {
+    outline: none;
+    padding: 0.5rem 2rem;
+    background-color: var(--purple);
+    color: white;
+    border-radius: 5px;
+}
+
+.filter-active:hover {
+    background-color: var(--darkPurple);
+}
+
+.notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.new-note-btn {
+    color: var(--purple);
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.new-note-btn i {
+    margin-right: 0.5rem;
+}

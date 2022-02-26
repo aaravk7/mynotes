@@ -7,6 +7,8 @@ const NoteState = (props) => {
     const alertC = useContext(AlertContext);
 
     const [notes, setNotes] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
+
     const fetchNotes = async () => {
         let url = "http://127.0.0.1:1000/notes";
         const response = await fetch(url, {
@@ -78,7 +80,7 @@ const NoteState = (props) => {
     }
 
     return (
-        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, fetchNotes }}>
+        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, fetchNotes, searchInput, setSearchInput }}>
             {props.children}
         </NoteContext.Provider>
     )

@@ -1,0 +1,47 @@
+.notes-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgb(233, 233, 233);
+}
+
+.notes-nav a {
+    color: var(--purple);
+}
+
+.notes-nav a:hover {
+    color: var(--darkPuple);
+}
+
+.notes-nav:active {
+    color: var(--purple);
+}
+
+.notes-nav:visited {
+    color: var(--purple);
+}
+
+.notes-nav .search-bar input {
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+.nav-btns {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-mid {
+        display: none;
+    }
+}
+
+
+.notes-nav .search-bar form {
+    display: flex;
+    align-items: center;
+}

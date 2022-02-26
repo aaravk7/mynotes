@@ -34,3 +34,10 @@
 .new-note-btn i {
     margin-right: 0.5rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    .filter-btn {
+        margin-bottom: 1rem;
+    }
+}

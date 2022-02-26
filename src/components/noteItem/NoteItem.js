@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import NoteContext from '../../context/NoteContext/NoteContext';
 import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
 import AlertContext from '../../context/AlertContext/AlertContext';
 import './NoteItem.css';
 
@@ -36,37 +33,32 @@ const NoteItem = (props) => {
     return (
         <>
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Edit {props.title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Title</Form.Label>
-                            <Form.Control type="text" name="title" value={note.title} onChange={inputHandler} />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3">
-                            <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} name="desc" value={note.desc} onChange={inputHandler} />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3">
-                            <Form.Label>Tag</Form.Label>
-                            <Form.Control type="text" name="tag" value={note.tag} onChange={inputHandler} />
-                        </Form.Group>
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="success" onClick={saveChanges}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
+                <div className="note-modal">
+                    <div className="note-modal-header">
+                        <div className="modal-info">
+                            Edit {props.title}
+                        </div>
+                        <button type="button" className="btn-close" aria-label="Close" onClick={handleClose}></button>
+                    </div>
+                    <div className="note-modal-body">
+                        <label>Title *</label>
+                        <input type="text" name="title" value={note.title} onChange={inputHandler} className="note-modal-input" />
+                        <label>Description *</label>
+                        <input type="textarea" rows={3} name="desc" value={note.desc} onChange={inputHandler} className="note-modal-input" />
+                        <label>Tag</label>
+                        <input type="text" name="tag" value={note.tag} onChange={inputHandler} className="note-modal-input" />
+                    </div>
+                    <div className="note-modal-footer">
+                        <button className="modal-btn cancel-btn" onClick={handleClose}>
+                            Close
+                        </button>
+                        <button className="modal-btn submits-btn" onClick={saveChanges}>
+                            <i className="fa-solid fa-check"></i> Save
+                        </button>
+                    </div>
+                </div>
             </Modal>
-            <div class="notes-card">
+            <div className="notes-card">
                 <div className="note-info">
                     <div className="note-date">{date} | {time}</div>
                     <div className="note-buttons">

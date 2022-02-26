@@ -24,7 +24,8 @@ const UserState = (props) => {
             alertC.showAlert(data.errors[0].msg, "danger");
             localStorage.removeItem("token");
         } else {
-            localStorage.setItem("token", data);
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("userName", data.userName);
             navigate('/');
             alertC.showAlert("Registered successfully !", "success");
         }
@@ -48,7 +49,8 @@ const UserState = (props) => {
             alertC.showAlert(data.errors[0].msg, "danger");
             localStorage.removeItem("token");
         } else {
-            localStorage.setItem("token", data);
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("userName", data.userName);
             navigate('/');
             alertC.showAlert("Logged in successfully !", "success");
         }
@@ -56,6 +58,7 @@ const UserState = (props) => {
 
     const signOut = () => {
         localStorage.removeItem("token");
+        localStorage.removeItem("userName");
         navigate('/login');
         alertC.showAlert("Logged out successfully !", "success");
     }

@@ -1,0 +1,147 @@
+.login-container {
+    height: calc(100vh - 72px);
+    background-color: var(--purple);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-header h1 {
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.login-header h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5rem 6rem 3rem 6rem;
+    margin-top: 5rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.login-card label {
+    color: rgb(73, 73, 73);
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.login-card input {
+    padding: 0.8rem;
+    width: 50ch;
+    margin-bottom: 2rem;
+    background-color: white;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+.login-card input:focus {
+    border: 2px solid var(--darkPurple);
+    outline: none;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-btn {
+    border: none;
+    outline: none;
+    padding: 1rem 4rem;
+    background-color: var(--darkPurple);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 3px var(--purple);
+    margin-bottom: 2rem;
+}
+
+.secondary-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--purple);
+    text-decoration: none;
+    text-align: center;
+}
+
+.logincard-img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: -4rem;
+    transform: translateX(-50%);
+    display: grid;
+    place-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .login-card {
+        padding: 3rem 3.5rem 1rem 3.5rem;
+    }
+
+    .login-card label {
+        font-size: 0.8rem;
+    }
+
+    .login-card input {
+        width: 40ch;
+    }
+
+    .logincard-img {
+        height: 7rem;
+        width: 7rem;
+        top: -3rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .login-card {
+        padding: 2rem 2.5rem 1rem 2.5rem;
+    }
+
+    .login-card label {
+        font-size: 0.8rem;
+    }
+
+    .login-card input {
+        width: 30ch;
+    }
+
+    .logincard-img {
+        height: 5rem;
+        width: 5rem;
+        top: -2rem;
+    }
+
+    .logincard-img img {
+        height: 2.5rem;
+    }
+
+    .login-header h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .login-header h2 {
+        font-size: 1.2rem;
+    }
+
+}

@@ -15,3 +15,72 @@ body {
   min-height: 100vh;
   background-color: var(--grey) !important;
 }
+
+.note-modal {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.note-modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.note-modal-header .btn-close {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.note-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-modal-input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.4rem;
+  margin-bottom: 1.2rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px rgb(53, 53, 53);
+}
+
+.note-modal-input:focus {
+  box-shadow: 0 0 5px var(--purple);
+}
+
+.note-modal-footer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 0.5rem 1.8rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #8191A6;
+}
+
+.cancel-btn:hover {
+  background-color: #616d7c;
+}
+
+.submits-btn {
+  background-color: var(--purple);
+}
+
+.submits-btn:hover {
+  background-color: var(--darkPurple);
+}
